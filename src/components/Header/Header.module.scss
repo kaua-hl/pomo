@@ -1,0 +1,56 @@
+@import "assets/sass/utils/variables";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttonMobile {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 10px;
+
+  span {
+    display: block;
+    margin: 3px 0px;
+    width: 30px;
+    height: 3px;
+    background: $c-7;
+  }
+
+  @media (min-width: 610px) {
+    display: none;
+  }
+}
+
+.header nav {
+  @media (max-width: 610px) {
+    display: none;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  li a {
+    padding: 10px;
+  }
+
+  li:last-child a {
+    font-weight: 500;
+    background: $c-1;
+    color: $c-8;
+    padding: 12px 40px;
+    border-radius: 5px;
+    width: 100%;
+    transition: 0.3s;
+
+    &:hover {
+      background: $c-10;
+    }
+  }
+}

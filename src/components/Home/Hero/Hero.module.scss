@@ -1,0 +1,60 @@
+@import "assets/sass/utils/variables";
+@import "assets/sass/utils/mixins";
+
+.hero {
+  background: url("../../../assets/images/4.png") no-repeat right;
+  background-size: 600px;
+  padding: 100px 0px;
+
+  .hero__content {
+    h1 {
+      @include t-font;
+      max-width: 20ch;
+
+      @media (max-width: 1070px) {
+        max-width: 15ch;
+      }
+
+      @media (max-width: 470px) {
+        font-size: 3rem;
+      }
+    }
+
+    p {
+      max-width: 50ch;
+      font-size: 1.25rem;
+      line-height: 30px;
+      margin: 45px 0px 55px;
+      @media (max-width: 1070px) {
+        max-width: 40ch;
+      }
+      @media (max-width: 470px) {
+        margin: 35px 0px 40px;
+        font-size: 1rem;
+      }
+    }
+
+    a {
+      font-size: 1.25rem;
+      background: $c-1;
+      color: #ffffff;
+      padding: 15px 70px;
+      border-radius: 5px;
+      @media (max-width: 470px) {
+        padding: 15px 60px;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @media (max-width: 870px) {
+    background: none;
+    .hero__content h1 {
+      max-width: 20ch;
+    }
+  }
+
+  @media (max-width: 470px) {
+    padding: 50px 0px;
+  }
+}

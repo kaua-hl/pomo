@@ -1,0 +1,17 @@
+@import "./variables.scss";
+
+%familyFont {
+  font-family: $f-1;
+}
+
+@mixin t-font {
+  font-size: 4rem;
+  @extend %familyFont;
+  font-weight: 600;
+}
+
+@mixin s-font {
+  font-size: 3rem;
+  @extend %familyFont;
+  font-weight: 500;
+}

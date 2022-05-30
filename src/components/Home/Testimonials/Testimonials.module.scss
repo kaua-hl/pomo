@@ -1,0 +1,43 @@
+@import "assets/sass/utils/variables";
+@import "assets/sass/utils/mixins";
+
+.testimonials {
+  background: $c-9;
+  padding: 120px 0px;
+
+  @media (max-width: 620px) {
+    padding: 60px 0px;
+  }
+
+  h2 {
+    @include s-font;
+  }
+
+  & > div {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    align-items: center;
+    @media (max-width: 1020px) {
+      gap: 50px 0px;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.testimonials__comments {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 100px 30px;
+
+  @media (max-width: 620px) {
+    gap: 50px 0px;
+    grid-template-columns: 1fr;
+  }
+
+  p {
+    max-width: 40ch;
+    font-size: 1.125rem;
+    margin-top: 15px;
+    line-height: 24px;
+  }
+}
